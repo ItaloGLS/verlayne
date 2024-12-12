@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Carta para a Professora Verlaynne</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Raleway', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background-color: rgb(194, 61, 194);
+            color: white;
+            text-align: center;
+            padding: 20px 10px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        header h2 {
+            margin: 0;
+            font-size: 1em;
+            font-weight: 300;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+        }
+
+        .content {
+            line-height: 1.8;
+            opacity: 0;
+            display: none;
+            transition: opacity 0.5s ease-in-out;
+            text-align: justify;
+        }
+
+        .content.show {
+            display: block;
+            opacity: 1;
+        }
+
+        .content strong {
+            color: rgb(194, 61, 194);
+        }
+
+        .surprise {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .surprise button {
+            padding: 10px 20px;
+            font-size: 1em;
+            color: white;
+            background-color: rgb(194, 61, 194);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .surprise button:hover {
+            background-color: rgb(170, 34, 170);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #4caf50;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Carta para a Professora Verlaynne Rocha</h1>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="surprise">
+                <p class="show" id="textref" style="font-weight: bold;">Temos uma <span style="color: rgb(170, 34, 170);">surpresa</span> para você...</p>
+                <button id="btnref" onclick="revealContent()">Abrir Surpresa</button>
+            </div>
+    
+            <div class="content" id="content">
+                <p style="font-size: 20px; font-weight: bold;">À querida Professora <span style="color: rgb(194, 61, 194);">Verlaynne Rocha,</span></p>
+                <p>Escrever esta carta para a senhora é uma tarefa tão desafiadora quanto tentar entender um código que não compila – mas, diferente disso, esta carta vem carregada de <strong>carinho, admiração e gratidão</strong>. Afinal, além de ser nossa professora de programação, a senhora também é uma inspiração para todos nós, seja pela sua sabedoria, seja pelo jeito único que tem de tornar as aulas leves e especiais.</p>
+    
+                <p>Quando pensamos nas suas aulas, é impossível não lembrar das suas frases icônicas, como “é sobre isso” e “entende?”. Confessamos que, às vezes, não entendemos nada (principalmente quando o assunto é lógica de programação), mas o seu jeito paciente e didático sempre nos ajuda a chegar lá – mesmo que seja na base do “debug” da vida real.</p>
+    
+                <p>E como não mencionar a Bia, sua filha, que de tanto ouvirmos falar parece ser quase parte da turma? A forma como a senhora fala dela, com tanto amor e orgulho, é um lembrete constante de que, além de ser uma professora incrível, a senhora também é uma mãe extraordinária. Sabemos que o mesmo cuidado que tem com ela, a senhora coloca nas nossas aulas, sempre se preocupando em nos preparar para o futuro, não só como programadores, mas como pessoas.</p>
+    
+                <p>Aliás, é incrível como a senhora consegue equilibrar tudo: ser mãe, professora e ainda ter energia para lidar com uma turma cheia de bugs humanos (também conhecidos como alunos). Mesmo quando as coisas saem do controle, a senhora sempre encontra um jeito de dizer: “Calma, gente, é só resolver parte por parte” – como quem sabe que tudo na vida tem solução, desde que tenhamos paciência e organização.</p>
+    
+                <p>Por tudo isso, e muito mais, não poderia haver escolha melhor do que a senhora para ser nossa <strong>madrinha de formatura</strong>. Mais do que professora, a senhora é uma verdadeira inspiração, mostrando que, assim como um bom programa, a vida precisa de lógica, mas também de coração.</p>
+    
+                <p>Com carinho, respeito e gratidão (e alguns “prints” de tela mental das suas lições),</p>
+                <p><strong>Turma B – Formandos de 2025</strong></p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function revealContent() {
+            const content = document.getElementById('content');
+            const textref = document.getElementById('textref');
+            const btnref = document.getElementById("btnref");
+            content.classList.add('show');
+            textref.style.display = "none";
+            btnref.style.display = "none";
+        }
+    </script>
+</body>
+</html>
